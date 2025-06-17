@@ -1,9 +1,11 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { TrendingUp } from "lucide-react"
+import { TrendingUp, Brain, Heart, Sparkles, Star, Flame, Users, Zap } from "lucide-react"
 import type { Quiz } from "@/lib/quiz-data"
 
 interface QuizCardProps {
@@ -11,22 +13,29 @@ interface QuizCardProps {
   showStats?: boolean
 }
 
+// Icon mapping to avoid passing components as props
+const iconMap = {
+  Brain,
+  Heart,
+  Sparkles,
+  Star,
+  Flame,
+  Users,
+  Zap,
+}
+
 export function QuizCard({ quiz, showStats = false }: QuizCardProps) {
-  const IconComponent = quiz.icon
+  const IconComponent = iconMap[quiz.iconName as keyof typeof iconMap] || Heart
 
   return (
     <Card className="group hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-2 border-gray-800 bg-gray-900/50 backdrop-blur-sm hover:bg-gray-900/70 overflow-hidden">
       {/* Quiz Image */}
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={`/images/quiz/${quiz.image}`}
+          src={`/placeholder.svg?height=192&width=384&text=${encodeURIComponent(quiz.title)}`}
           alt={quiz.title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-110"
-          onError={(e) => {
-            // Fallback to placeholder if image doesn't exist
-            e.currentTarget.src = "/placeholder.svg?height=192&width=384&text=Quiz+Image"
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
 

@@ -1,11 +1,10 @@
-import { Brain, Heart, Sparkles, Star, Flame, Users, Zap } from "lucide-react"
 import { getQuizAnalytics, updateTrendingScores, formatTakeCount } from "./quiz-analytics"
 
 export interface Quiz {
   id: string
   title: string
   description: string
-  icon: any
+  iconName: string // Changed from icon component to string
   color: string
   questions: number
   takes: string
@@ -22,7 +21,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "animal-personality",
     title: "Which Animal Are You?",
     description: "Discover your spirit animal based on your personality traits!",
-    icon: Heart,
+    iconName: "Heart", // Changed to string
     color: "bg-gradient-to-br from-green-500 to-emerald-600",
     questions: 10,
     image: "animal-personality.jpg",
@@ -32,7 +31,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "movie-character",
     title: "Which Movie Hero Are You?",
     description: "Find out which iconic movie character matches your personality!",
-    icon: Star,
+    iconName: "Star", // Changed to string
     color: "bg-gradient-to-br from-purple-500 to-violet-600",
     questions: 10,
     image: "movie-character.jpg",
@@ -42,7 +41,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "career-match",
     title: "What's Your Dream Career?",
     description: "Uncover the perfect career path that suits your interests!",
-    icon: Brain,
+    iconName: "Brain", // Changed to string
     color: "bg-gradient-to-br from-blue-500 to-cyan-600",
     questions: 12,
     image: "career-match.jpg",
@@ -52,7 +51,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "travel-destination",
     title: "Your Perfect Travel Destination",
     description: "Where should you go on your next adventure?",
-    icon: Sparkles,
+    iconName: "Sparkles", // Changed to string
     color: "bg-gradient-to-br from-orange-500 to-red-500",
     questions: 10,
     image: "travel-destination.jpg",
@@ -62,7 +61,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "food-personality",
     title: "Which Food Represents You?",
     description: "Discover what your taste says about your personality!",
-    icon: Heart,
+    iconName: "Heart", // Changed to string
     color: "bg-gradient-to-br from-pink-500 to-rose-600",
     questions: 10,
     image: "food-personality.jpg",
@@ -72,7 +71,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "color-personality",
     title: "What's Your True Color?",
     description: "Find the color that matches your inner self!",
-    icon: Zap,
+    iconName: "Zap", // Changed to string
     color: "bg-gradient-to-br from-indigo-500 to-purple-600",
     questions: 10,
     image: "color-personality.jpg",
@@ -82,7 +81,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "house-style",
     title: "Your Dream House Style",
     description: "What architectural style fits your personality?",
-    icon: Users,
+    iconName: "Users", // Changed to string
     color: "bg-gradient-to-br from-teal-500 to-green-600",
     questions: 10,
     image: "house-style.jpg",
@@ -92,7 +91,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "workout-type",
     title: "Your Perfect Workout",
     description: "Find the exercise routine that matches your style!",
-    icon: Flame,
+    iconName: "Flame", // Changed to string
     color: "bg-gradient-to-br from-red-500 to-orange-600",
     questions: 10,
     image: "workout-type.jpg",
@@ -102,7 +101,7 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     id: "music-genre",
     title: "Your Music Genre Match",
     description: "What music genre represents your soul?",
-    icon: Star,
+    iconName: "Star", // Changed to string
     color: "bg-gradient-to-br from-violet-500 to-purple-600",
     questions: 10,
     image: "music-genre.jpg",

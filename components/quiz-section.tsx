@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import type { Quiz } from "@/lib/quiz-data"
 import { QuizCard } from "./quiz-card"
