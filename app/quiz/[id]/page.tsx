@@ -130,7 +130,7 @@ const quizData = {
       emoji: "♟️",
     },
   }
-}
+},
   "animal-personality": {
     title: "Which Animal Are You?",
     questions: [

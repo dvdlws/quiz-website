@@ -15,6 +15,16 @@ export interface QuizAnalytics {
 // Simulated analytics data - replace with real data from your analytics
 export const quizAnalytics: QuizAnalytics[] = [
   {
+    id: "core-personality",
+    totalTakes: 0,
+    recentTakes: 0,
+    completionRate: 0,
+    shareRate: 0,
+    avgRating: 0,
+    trendingScore: 0,
+    lastUpdated: new Date(),
+  },
+  {
     id: "animal-personality",
     totalTakes: 2100000,
     recentTakes: 45000,
