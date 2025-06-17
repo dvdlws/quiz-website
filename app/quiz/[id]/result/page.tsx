@@ -9,7 +9,21 @@ import Link from "next/link"
 import { AdBanner } from "@/components/ad-banner"
 import { useState } from "react"
 
-const quizData = {
+// Define the result type
+interface QuizResult {
+  animal: string
+  description: string
+  traits: string[]
+  emoji: string
+}
+
+// Define the quiz data type
+interface QuizData {
+  title: string
+  results: Record<string, QuizResult>
+}
+
+const quizData: Record<string, QuizData> = {
   "animal-personality": {
     title: "Which Animal Are You?",
     results: {
@@ -37,7 +51,7 @@ const quizData = {
       dolphin: {
         animal: "Dolphin",
         description:
-          "You're playful, intelligent,  and social! You bring joy wherever you go and have a natural ability to connect with others. Your optimism and creativity make you a delight to be around.",
+          "You're playful, intelligent, and social! You bring joy wherever you go and have a natural ability to connect with others. Your optimism and creativity make you a delight to be around.",
         traits: ["Playfulness", "Intelligence", "Social", "Optimism"],
         emoji: "🐬",
       },
@@ -316,8 +330,8 @@ export default function ResultPage() {
   const resultKey = searchParams.get("result")
   const [copied, setCopied] = useState(false)
 
-  const quiz = quizData[quizId as keyof typeof quizData]
-  const result = quiz?.results[resultKey as keyof typeof quiz.results]
+  const quiz = quizData[quizId]
+  const result = quiz?.results[resultKey || ""] as QuizResult | undefined
 
   if (!quiz || !result) {
     return (
