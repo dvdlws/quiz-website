@@ -1230,7 +1230,7 @@ export default function QuizPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex gap-8 max-w-6xl mx-auto">
           {/* Main Quiz Content */}
-          <div className="flex-1 max-w-2xl mx-auto lg:mx-0">
+          <div className="flex-1 max-w-2xl mx-auto">
             <div className="mb-8">
               <Link
                 href="/"
