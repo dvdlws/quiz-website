@@ -107,6 +107,16 @@ const baseQuizzes: Omit<Quiz, "takes" | "trending" | "trendingScore" | "completi
     image: "music-genre.jpg",
     category: "lifestyle",
   },
+  {
+  id: "core-personality",
+  title: "What’s Your Core Personality Type?",
+  description: "Are you an Explorer, Guardian, Creator, or Strategist? Discover the core traits that define you.",
+  icon: Brain, // from lucide-react
+  color: "bg-gradient-to-br from-indigo-500 to-purple-600",
+  questions: 10,
+  image: "core-personality.jpg",
+  category: "personality"
+},
 ]
 
 // Enrich quizzes with real-time analytics data

@@ -10,6 +10,127 @@ import Link from "next/link"
 import { AdBanner } from "@/components/ad-banner"
 
 const quizData = {
+  "core-personality": {
+  title: "What’s Your Core Personality Type?",
+  questions: [
+    {
+      question: "How do you prefer to spend your weekend?",
+      options: [
+        { text: "Exploring somewhere new", value: "explorer" },
+        { text: "Relaxing at home", value: "guardian" },
+        { text: "Working on a creative project", value: "creator" },
+        { text: "Planning your next move", value: "strategist" },
+      ],
+    },
+    {
+      question: "What motivates you most?",
+      options: [
+        { text: "Adventure and experience", value: "explorer" },
+        { text: "Stability and safety", value: "guardian" },
+        { text: "Expression and originality", value: "creator" },
+        { text: "Growth and mastery", value: "strategist" },
+      ],
+    },
+    {
+      question: "Which word best describes you?",
+      options: [
+        { text: "Curious", value: "explorer" },
+        { text: "Loyal", value: "guardian" },
+        { text: "Imaginative", value: "creator" },
+        { text: "Analytical", value: "strategist" },
+      ],
+    },
+    {
+      question: "How do you handle stress?",
+      options: [
+        { text: "Take a break and wander", value: "explorer" },
+        { text: "Stick to your routine", value: "guardian" },
+        { text: "Channel it into a project", value: "creator" },
+        { text: "Problem-solve the cause", value: "strategist" },
+      ],
+    },
+    {
+      question: "What’s your ideal workspace?",
+      options: [
+        { text: "Anywhere with Wi-Fi", value: "explorer" },
+        { text: "Comfortable and quiet", value: "guardian" },
+        { text: "Visually inspiring", value: "creator" },
+        { text: "Organized and optimized", value: "strategist" },
+      ],
+    },
+    {
+      question: "Friends know you as...",
+      options: [
+        { text: "The adventurous one", value: "explorer" },
+        { text: "The dependable one", value: "guardian" },
+        { text: "The artistic one", value: "creator" },
+        { text: "The smart one", value: "strategist" },
+      ],
+    },
+    {
+      question: "Which genre fits your taste?",
+      options: [
+        { text: "Travel or mystery", value: "explorer" },
+        { text: "Slice of life or drama", value: "guardian" },
+        { text: "Fantasy or art films", value: "creator" },
+        { text: "Documentary or sci-fi", value: "strategist" },
+      ],
+    },
+    {
+      question: "What’s your decision-making style?",
+      options: [
+        { text: "Follow your gut", value: "explorer" },
+        { text: "Play it safe", value: "guardian" },
+        { text: "Go with your vision", value: "creator" },
+        { text: "Weigh all options", value: "strategist" },
+      ],
+    },
+    {
+      question: "Your biggest strength is...",
+      options: [
+        { text: "Open-mindedness", value: "explorer" },
+        { text: "Loyalty", value: "guardian" },
+        { text: "Creativity", value: "creator" },
+        { text: "Strategic thinking", value: "strategist" },
+      ],
+    },
+    {
+      question: "Which quote speaks to you?",
+      options: [
+        { text: "“Not all who wander are lost.”", value: "explorer" },
+        { text: "“Home is where the heart is.”", value: "guardian" },
+        { text: "“Creativity takes courage.”", value: "creator" },
+        { text: "“Failing to plan is planning to fail.”", value: "strategist" },
+      ],
+    },
+  ],
+  results: {
+    explorer: {
+      animal: "Explorer",
+      description: "You’re driven by curiosity and a love for new experiences. You thrive on spontaneity, variety, and breaking free from the routine.",
+      traits: ["Adventurous", "Curious", "Energetic"],
+      emoji: "🌍",
+    },
+    guardian: {
+      animal: "Guardian",
+      description: "You value security, loyalty, and structure. Friends turn to you for dependability and a grounded perspective.",
+      traits: ["Loyal", "Grounded", "Caring"],
+      emoji: "🛡️",
+    },
+    creator: {
+      animal: "Creator",
+      description: "You see the world as a canvas. Your originality and expressive soul help you bring beauty, emotion, and meaning into everything you do.",
+      traits: ["Imaginative", "Expressive", "Free-spirited"],
+      emoji: "🎨",
+    },
+    strategist: {
+      animal: "Strategist",
+      description: "You approach life with logic, foresight, and drive. You’re a natural planner, always one step ahead of the game.",
+      traits: ["Analytical", "Efficient", "Focused"],
+      emoji: "♟️",
+    },
+  }
+}
   "animal-personality": {
     title: "Which Animal Are You?",
     questions: [
