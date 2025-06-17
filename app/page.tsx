@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 relative cursor-pointer group">
   <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent 
-                   animate-pulse hover:animate-none transition-all duration-300
+                   animate-pulse hover:animate-none transition-all duration-500
                    group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-300
                    relative z-10">
     QuizMania
@@ -30,7 +30,7 @@ export default function HomePage() {
   
   {/* Glow effect */}
   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 
-                  opacity-0 group-hover:opacity-30 blur-xl transition-all duration-300 -z-10
+                  opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500 -z-10
                   group-hover:scale-110"></div>
 </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
