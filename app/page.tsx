@@ -13,9 +13,26 @@ export default function HomePage() {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
-            QuizMania
-          </h1>
+          <h1 className="text-6xl font-bold mb-6 relative cursor-pointer group">
+  <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent 
+                   animate-pulse hover:animate-none transition-all duration-300
+                   group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-300
+                   relative z-10">
+    QuizMania
+  </span>
+  
+  {/* Glistening overlay effect */}
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent 
+                   opacity-0 group-hover:opacity-20 group-hover:animate-shimmer
+                   bg-size-200 transition-all duration-500 z-20 bg-clip-text text-transparent">
+    QuizMania
+  </span>
+  
+  {/* Glow effect */}
+  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 
+                  opacity-0 group-hover:opacity-30 blur-xl transition-all duration-300 -z-10
+                  group-hover:scale-110"></div>
+</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Discover something new about yourself with our fun personality quizzes! Take a break and explore who you
             really are.
